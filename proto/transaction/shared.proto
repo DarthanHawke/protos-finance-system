@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option go_package = "pmtstm.v1;pmtstmv1";
+
+package transaction;
+
+import "google/protobuf/timestamp.proto";
+
+message UUID {
+  string value = 1;
+}
+
+message Transaction {
+  UUID id = 1;
+  string type = 2;
+  double amount = 3;
+  string currency = 4;
+  string sender_type = 5;
+  string sender_account_cCode = 6;
+  string sender_phone = 7;
+  string sender_card_number = 8;
+  string recipient_type = 9;
+  string recipient_account_code = 10;
+  string recipient_phone = 11;
+  string recipient_card_number = 12;
+  string processing_code = 13;
+  string stan = 14;
+  string authorization_code = 15;
+  string description = 16;
+  string status = 17;
+  google.protobuf.Timestamp created_at = 18;
+  google.protobuf.Timestamp updated_at = 19;
+}

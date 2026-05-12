@@ -235,7 +235,7 @@ type BalanceOperation struct {
 	Amount        float64                `protobuf:"fixed64,5,opt,name=amount,proto3" json:"amount,omitempty"`
 	OperationType string                 `protobuf:"bytes,6,opt,name=operation_type,json=operationType,proto3" json:"operation_type,omitempty"`
 	Status        string                 `protobuf:"bytes,7,opt,name=status,proto3" json:"status,omitempty"`
-	PaymentId     *UUID                  `protobuf:"bytes,8,opt,name=payment_id,json=paymentId,proto3,oneof" json:"payment_id,omitempty"`
+	PaymentId     *UUID                  `protobuf:"bytes,8,opt,name=Payment_id,json=PaymentId,proto3,oneof" json:"Payment_id,omitempty"`
 	Description   string                 `protobuf:"bytes,9,opt,name=description,proto3" json:"description,omitempty"`
 	CreatedAt     *timestamppb.Timestamp `protobuf:"bytes,10,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
 	ProcessedAt   *timestamppb.Timestamp `protobuf:"bytes,11,opt,name=processed_at,json=processedAt,proto3" json:"processed_at,omitempty"`
@@ -823,13 +823,13 @@ const file_billing_shared_proto_rawDesc = "" +
 	"\x0eoperation_type\x18\x06 \x01(\tR\roperationType\x12\x16\n" +
 	"\x06status\x18\a \x01(\tR\x06status\x121\n" +
 	"\n" +
-	"payment_id\x18\b \x01(\v2\r.billing.UUIDH\x00R\tpaymentId\x88\x01\x01\x12 \n" +
+	"Payment_id\x18\b \x01(\v2\r.billing.UUIDH\x00R\tPaymentId\x88\x01\x01\x12 \n" +
 	"\vdescription\x18\t \x01(\tR\vdescription\x129\n" +
 	"\n" +
 	"created_at\x18\n" +
 	" \x01(\v2\x1a.google.protobuf.TimestampR\tcreatedAt\x12=\n" +
 	"\fprocessed_at\x18\v \x01(\v2\x1a.google.protobuf.TimestampR\vprocessedAtB\r\n" +
-	"\v_payment_id\"\xb0\x02\n" +
+	"\v_Payment_id\"\xb0\x02\n" +
 	"\x0fCurrencyAccount\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12&\n" +
@@ -902,7 +902,7 @@ var file_billing_shared_proto_depIdxs = []int32{
 	10, // 2: billing.Payment.updated_at:type_name -> google.protobuf.Timestamp
 	0,  // 3: billing.BalanceOperation.id:type_name -> billing.UUID
 	0,  // 4: billing.BalanceOperation.operation_id:type_name -> billing.UUID
-	0,  // 5: billing.BalanceOperation.payment_id:type_name -> billing.UUID
+	0,  // 5: billing.BalanceOperation.Payment_id:type_name -> billing.UUID
 	10, // 6: billing.BalanceOperation.created_at:type_name -> google.protobuf.Timestamp
 	10, // 7: billing.BalanceOperation.processed_at:type_name -> google.protobuf.Timestamp
 	0,  // 8: billing.CurrencyAccount.user_id:type_name -> billing.UUID

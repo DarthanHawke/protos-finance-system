@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option go_package = "pmtstm.v1;pmtstmv1";
+
+package transaction;
+
+import "transaction/shared.proto";
+
+service TransactionService {
+  rpc GetTransaction (GetTransactionRequest) returns (GetTransactionResponse);
+  rpc GetTransactions (GetTransactionsRequest) returns (GetTransactionsResponse);
+}
+
+message GetTransactionRequest {
+  UUID id = 1;
+}
+
+message GetTransactionResponse {
+  Transaction transaction = 1;
+}
+
+message GetTransactionsRequest {
+  string account_code = 1;
+  int32 limit = 2;
+  int32 offcet = 3;
+}
+
+message GetTransactionsResponse {
+  repeated Transaction transaction = 1;
+}

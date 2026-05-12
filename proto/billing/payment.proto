@@ -28,7 +28,7 @@ message TransferRequest {
 }
 
 message TransferResponse {
-  UUID payment_id = 1;
+  UUID Payment_id = 1;
 }
 
 message DepositRequest {
@@ -38,15 +38,15 @@ message DepositRequest {
 }
 
 message DepositResponse {
-  UUID payment_id = 1;
+  UUID Payment_id = 1;
 }
 
 message GetPaymentRequest {
-  UUID payment_id = 2;
+  UUID Payment_id = 2;
 }
 
 message GetPaymentResponse {
-  Payment payment = 1;
+  Payment Payment = 1;
 }
 
 message GetAllPaymentRequest {
@@ -54,16 +54,16 @@ message GetAllPaymentRequest {
 }
 
 message GetAllPaymentResponse {
-  repeated Payment payment = 1;
+  repeated Payment Payment = 1;
 }
 
 message UpdateStatusPaymentRequest {
-  UUID payment_id = 1;
+  UUID Payment_id = 1;
   string status = 2;
 }
 
 message CancelPaymentRequest {
-  UUID payment_id = 2;
+  UUID Payment_id = 2;
 }
 
 message ConvertCurrencyRequest {

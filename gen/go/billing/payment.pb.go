@@ -92,7 +92,7 @@ func (x *TransferRequest) GetDescription() string {
 
 type TransferResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	PaymentId     *UUID                  `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
+	PaymentId     *UUID                  `protobuf:"bytes,1,opt,name=Payment_id,json=PaymentId,proto3" json:"Payment_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -196,7 +196,7 @@ func (x *DepositRequest) GetDescription() string {
 
 type DepositResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	PaymentId     *UUID                  `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
+	PaymentId     *UUID                  `protobuf:"bytes,1,opt,name=Payment_id,json=PaymentId,proto3" json:"Payment_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -240,7 +240,7 @@ func (x *DepositResponse) GetPaymentId() *UUID {
 
 type GetPaymentRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	PaymentId     *UUID                  `protobuf:"bytes,2,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
+	PaymentId     *UUID                  `protobuf:"bytes,2,opt,name=Payment_id,json=PaymentId,proto3" json:"Payment_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -284,7 +284,7 @@ func (x *GetPaymentRequest) GetPaymentId() *UUID {
 
 type GetPaymentResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Payment       *Payment               `protobuf:"bytes,1,opt,name=payment,proto3" json:"payment,omitempty"`
+	Payment       *Payment               `protobuf:"bytes,1,opt,name=Payment,proto3" json:"Payment,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -372,7 +372,7 @@ func (x *GetAllPaymentRequest) GetUserId() *UUID {
 
 type GetAllPaymentResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Payment       []*Payment             `protobuf:"bytes,1,rep,name=payment,proto3" json:"payment,omitempty"`
+	Payment       []*Payment             `protobuf:"bytes,1,rep,name=Payment,proto3" json:"Payment,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -416,7 +416,7 @@ func (x *GetAllPaymentResponse) GetPayment() []*Payment {
 
 type UpdateStatusPaymentRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	PaymentId     *UUID                  `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
+	PaymentId     *UUID                  `protobuf:"bytes,1,opt,name=Payment_id,json=PaymentId,proto3" json:"Payment_id,omitempty"`
 	Status        string                 `protobuf:"bytes,2,opt,name=status,proto3" json:"status,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -468,7 +468,7 @@ func (x *UpdateStatusPaymentRequest) GetStatus() string {
 
 type CancelPaymentRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	PaymentId     *UUID                  `protobuf:"bytes,2,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
+	PaymentId     *UUID                  `protobuf:"bytes,2,opt,name=Payment_id,json=PaymentId,proto3" json:"Payment_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -895,7 +895,7 @@ const file_billing_payment_proto_rawDesc = "" +
 	"\f_description\"@\n" +
 	"\x10TransferResponse\x12,\n" +
 	"\n" +
-	"payment_id\x18\x01 \x01(\v2\r.billing.UUIDR\tpaymentId\"i\n" +
+	"Payment_id\x18\x01 \x01(\v2\r.billing.UUIDR\tPaymentId\"i\n" +
 	"\x0eDepositRequest\x12\x1d\n" +
 	"\n" +
 	"account_id\x18\x01 \x01(\tR\taccountId\x12\x16\n" +
@@ -903,25 +903,25 @@ const file_billing_payment_proto_rawDesc = "" +
 	"\vdescription\x18\x03 \x01(\tR\vdescription\"?\n" +
 	"\x0fDepositResponse\x12,\n" +
 	"\n" +
-	"payment_id\x18\x01 \x01(\v2\r.billing.UUIDR\tpaymentId\"A\n" +
+	"Payment_id\x18\x01 \x01(\v2\r.billing.UUIDR\tPaymentId\"A\n" +
 	"\x11GetPaymentRequest\x12,\n" +
 	"\n" +
-	"payment_id\x18\x02 \x01(\v2\r.billing.UUIDR\tpaymentId\"@\n" +
+	"Payment_id\x18\x02 \x01(\v2\r.billing.UUIDR\tPaymentId\"@\n" +
 	"\x12GetPaymentResponse\x12*\n" +
-	"\apayment\x18\x01 \x01(\v2\x10.billing.PaymentR\apayment\"O\n" +
+	"\aPayment\x18\x01 \x01(\v2\x10.billing.PaymentR\aPayment\"O\n" +
 	"\x14GetAllPaymentRequest\x12+\n" +
 	"\auser_id\x18\x01 \x01(\v2\r.billing.UUIDH\x00R\x06userId\x88\x01\x01B\n" +
 	"\n" +
 	"\b_user_id\"C\n" +
 	"\x15GetAllPaymentResponse\x12*\n" +
-	"\apayment\x18\x01 \x03(\v2\x10.billing.PaymentR\apayment\"b\n" +
+	"\aPayment\x18\x01 \x03(\v2\x10.billing.PaymentR\aPayment\"b\n" +
 	"\x1aUpdateStatusPaymentRequest\x12,\n" +
 	"\n" +
-	"payment_id\x18\x01 \x01(\v2\r.billing.UUIDR\tpaymentId\x12\x16\n" +
+	"Payment_id\x18\x01 \x01(\v2\r.billing.UUIDR\tPaymentId\x12\x16\n" +
 	"\x06status\x18\x02 \x01(\tR\x06status\"D\n" +
 	"\x14CancelPaymentRequest\x12,\n" +
 	"\n" +
-	"payment_id\x18\x02 \x01(\v2\r.billing.UUIDR\tpaymentId\"\x9e\x01\n" +
+	"Payment_id\x18\x02 \x01(\v2\r.billing.UUIDR\tPaymentId\"\x9e\x01\n" +
 	"\x16ConvertCurrencyRequest\x12&\n" +
 	"\x0ffrom_account_id\x18\x01 \x01(\tR\rfromAccountId\x12\"\n" +
 	"\rto_account_id\x18\x02 \x01(\tR\vtoAccountId\x12\x16\n" +
@@ -999,14 +999,14 @@ var file_billing_payment_proto_goTypes = []any{
 	(*emptypb.Empty)(nil),               // 20: google.protobuf.Empty
 }
 var file_billing_payment_proto_depIdxs = []int32{
-	17, // 0: billing.TransferResponse.payment_id:type_name -> billing.UUID
-	17, // 1: billing.DepositResponse.payment_id:type_name -> billing.UUID
-	17, // 2: billing.GetPaymentRequest.payment_id:type_name -> billing.UUID
-	18, // 3: billing.GetPaymentResponse.payment:type_name -> billing.Payment
+	17, // 0: billing.TransferResponse.Payment_id:type_name -> billing.UUID
+	17, // 1: billing.DepositResponse.Payment_id:type_name -> billing.UUID
+	17, // 2: billing.GetPaymentRequest.Payment_id:type_name -> billing.UUID
+	18, // 3: billing.GetPaymentResponse.Payment:type_name -> billing.Payment
 	17, // 4: billing.GetAllPaymentRequest.user_id:type_name -> billing.UUID
-	18, // 5: billing.GetAllPaymentResponse.payment:type_name -> billing.Payment
-	17, // 6: billing.UpdateStatusPaymentRequest.payment_id:type_name -> billing.UUID
-	17, // 7: billing.CancelPaymentRequest.payment_id:type_name -> billing.UUID
+	18, // 5: billing.GetAllPaymentResponse.Payment:type_name -> billing.Payment
+	17, // 6: billing.UpdateStatusPaymentRequest.Payment_id:type_name -> billing.UUID
+	17, // 7: billing.CancelPaymentRequest.Payment_id:type_name -> billing.UUID
 	17, // 8: billing.ConvertCurrencyResponse.operation_id:type_name -> billing.UUID
 	19, // 9: billing.GetOperationHistoryResponse.operations:type_name -> billing.BalanceOperation
 	0,  // 10: billing.PaymentService.Transfer:input_type -> billing.TransferRequest

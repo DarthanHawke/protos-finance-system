@@ -10,7 +10,7 @@ message UUID {
   string value = 1;
 }
 
-message Payment {
+message payment {
   UUID id = 1;
   string sender = 2;
   string receiver = 3;

@@ -1,4 +1,4 @@
-module github.com/DarthanHawke/protos-payment-system
+module github.com/DarthanHawke/protos-finance-system
 
 go 1.23.6
 

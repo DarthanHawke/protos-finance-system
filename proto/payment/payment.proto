@@ -7,14 +7,14 @@ package payment;
 import "payment/shared.proto";
 import "google/protobuf/empty.proto";
 
-service PaymentService {
-  rpc CreatePayment (CreatePaymentRequest) returns (CreatePaymentResponse);
-  rpc GetPayment (GetPaymentRequest) returns (GetPaymentResponse);
-  rpc UpdateStatusPayment (UpdateStatusPaymentRequest) returns (google.protobuf.Empty);
-  rpc CancelPayment (CancelPaymentRequest) returns (google.protobuf.Empty);
+service paymentService {
+  rpc Createpayment (CreatepaymentRequest) returns (CreatepaymentResponse);
+  rpc Getpayment (GetpaymentRequest) returns (GetpaymentResponse);
+  rpc UpdateStatuspayment (UpdateStatuspaymentRequest) returns (google.protobuf.Empty);
+  rpc Cancelpayment (CancelpaymentRequest) returns (google.protobuf.Empty);
 }
 
-message CreatePaymentRequest {
+message CreatepaymentRequest {
   string sender = 1;
   string receiver = 2;
   double amount = 3;
@@ -22,23 +22,23 @@ message CreatePaymentRequest {
   optional string description = 5;
 }
 
-message CreatePaymentResponse {
+message CreatepaymentResponse {
   UUID id = 1;
 }
 
-message GetPaymentRequest {
+message GetpaymentRequest {
   UUID id = 1;
 }
 
-message GetPaymentResponse {
-  Payment payment = 1;
+message GetpaymentResponse {
+  payment payment = 1;
 }
 
-message UpdateStatusPaymentRequest {
+message UpdateStatuspaymentRequest {
   UUID id = 1;
   string status = 2;
 }
 
-message CancelPaymentRequest {
+message CancelpaymentRequest {
   UUID id = 1;
 }

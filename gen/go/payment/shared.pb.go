@@ -181,7 +181,7 @@ const file_payment_shared_proto_rawDesc = "" +
 	"\x14payment/shared.proto\x12\apayment\x1a\x1fgoogle/protobuf/timestamp.proto\"\x1c\n" +
 	"\x04UUID\x12\x14\n" +
 	"\x05value\x18\x01 \x01(\tR\x05value\"\xd5\x02\n" +
-	"\aPayment\x12\x1d\n" +
+	"\apayment\x12\x1d\n" +
 	"\x02id\x18\x01 \x01(\v2\r.payment.UUIDR\x02id\x12\x16\n" +
 	"\x06sender\x18\x02 \x01(\tR\x06sender\x12\x1a\n" +
 	"\breceiver\x18\x03 \x01(\tR\breceiver\x12\x16\n" +
@@ -210,13 +210,13 @@ func file_payment_shared_proto_rawDescGZIP() []byte {
 var file_payment_shared_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_payment_shared_proto_goTypes = []any{
 	(*UUID)(nil),                  // 0: payment.UUID
-	(*Payment)(nil),               // 1: payment.Payment
+	(*Payment)(nil),               // 1: payment.payment
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
 var file_payment_shared_proto_depIdxs = []int32{
-	0, // 0: payment.Payment.id:type_name -> payment.UUID
-	2, // 1: payment.Payment.created_at:type_name -> google.protobuf.Timestamp
-	2, // 2: payment.Payment.updated_at:type_name -> google.protobuf.Timestamp
+	0, // 0: payment.payment.id:type_name -> payment.UUID
+	2, // 1: payment.payment.created_at:type_name -> google.protobuf.Timestamp
+	2, // 2: payment.payment.updated_at:type_name -> google.protobuf.Timestamp
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name

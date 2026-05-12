@@ -35,7 +35,7 @@ message BalanceOperation {
   double amount = 5;
   string operation_type = 6;
   string status = 7;
-  optional UUID payment_id = 8;
+  optional UUID Payment_id = 8;
   string description = 9;
   google.protobuf.Timestamp created_at = 10;
   google.protobuf.Timestamp processed_at = 11;
