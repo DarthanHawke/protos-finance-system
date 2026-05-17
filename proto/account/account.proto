@@ -5,43 +5,44 @@ option go_package = "pmtstm.v1;pmtstmv1";
 package account;
 
 import "account/shared.proto";
+import "google/protobuf/empty.proto";
 
 service AccountService {
-  rpc CreateAccount (CreateAccountRequest) returns (CreateAccountResponse);
+  rpc CreateAccount (CreateAccountRequest) returns (google.protobuf.Empty);
   rpc GetAccount(GetAccountRequest) returns (GetAccountResponse);
-  rpc GetUserAccounts(GetUserAccountsRequest) returns (GetUserAccountsResponse);
-  rpc GetBalance (GetBalanceRequest) returns (GetBalanceResponse);
+  rpc GetAccounts(GetAccountsRequest) returns (GetAccountsResponse);
+  rpc BlockAccount (BlockAccountRequest) returns (google.protobuf.Empty);
+  rpc CloseAccount (CloseAccountRequest) returns (google.protobuf.Empty);
 }
 
 message CreateAccountRequest {
-  string currency = 1;
-  string name = 2;
-}
-
-message CreateAccountResponse {
-  string account_id = 1;
+  string name = 1;
+  UUID user_id = 2;
+  string currency = 3;
 }
 
 message GetAccountRequest {
-  string account_id = 1;
+  string code = 1;
 }
 
 message GetAccountResponse {
-  CurrencyAccount account = 1;
+  Account account = 1;
 }
 
-message GetUserAccountsRequest {
-  optional UUID user_id = 1;
+message GetAccountsRequest {
+  UUID user_id = 1;
+  int32 limit = 2;
+  int32 offcet = 3;
 }
 
-message GetUserAccountsResponse {
-  repeated CurrencyAccount accounts = 1;
+message GetAccountsResponse {
+  repeated Account accounts = 1;
 }
 
-message GetBalanceRequest {
-  string account_id = 1;
+message BlockAccountRequest {
+  string code = 1;
 }
 
-message GetBalanceResponse {
-  double balance = 1;
+message CloseAccountRequest {
+  string code = 1;
 }
