@@ -73,7 +73,7 @@ type Transaction struct {
 	Amount               float64                `protobuf:"fixed64,3,opt,name=amount,proto3" json:"amount,omitempty"`
 	Currency             string                 `protobuf:"bytes,4,opt,name=currency,proto3" json:"currency,omitempty"`
 	SenderType           string                 `protobuf:"bytes,5,opt,name=sender_type,json=senderType,proto3" json:"sender_type,omitempty"`
-	SenderAccountCCode   string                 `protobuf:"bytes,6,opt,name=sender_account_cCode,json=senderAccountCCode,proto3" json:"sender_account_cCode,omitempty"`
+	SenderAccountCode    string                 `protobuf:"bytes,6,opt,name=sender_account_code,json=senderAccountCode,proto3" json:"sender_account_code,omitempty"`
 	SenderPhone          string                 `protobuf:"bytes,7,opt,name=sender_phone,json=senderPhone,proto3" json:"sender_phone,omitempty"`
 	SenderCardNumber     string                 `protobuf:"bytes,8,opt,name=sender_card_number,json=senderCardNumber,proto3" json:"sender_card_number,omitempty"`
 	RecipientType        string                 `protobuf:"bytes,9,opt,name=recipient_type,json=recipientType,proto3" json:"recipient_type,omitempty"`
@@ -156,9 +156,9 @@ func (x *Transaction) GetSenderType() string {
 	return ""
 }
 
-func (x *Transaction) GetSenderAccountCCode() string {
+func (x *Transaction) GetSenderAccountCode() string {
 	if x != nil {
-		return x.SenderAccountCCode
+		return x.SenderAccountCode
 	}
 	return ""
 }
@@ -260,15 +260,15 @@ const file_transaction_shared_proto_rawDesc = "" +
 	"\n" +
 	"\x18transaction/shared.proto\x12\vtransaction\x1a\x1fgoogle/protobuf/timestamp.proto\"\x1c\n" +
 	"\x04UUID\x12\x14\n" +
-	"\x05value\x18\x01 \x01(\tR\x05value\"\xf2\x05\n" +
+	"\x05value\x18\x01 \x01(\tR\x05value\"\xf0\x05\n" +
 	"\vTransaction\x12!\n" +
 	"\x02id\x18\x01 \x01(\v2\x11.transaction.UUIDR\x02id\x12\x12\n" +
 	"\x04type\x18\x02 \x01(\tR\x04type\x12\x16\n" +
 	"\x06amount\x18\x03 \x01(\x01R\x06amount\x12\x1a\n" +
 	"\bcurrency\x18\x04 \x01(\tR\bcurrency\x12\x1f\n" +
 	"\vsender_type\x18\x05 \x01(\tR\n" +
-	"senderType\x120\n" +
-	"\x14sender_account_cCode\x18\x06 \x01(\tR\x12senderAccountCCode\x12!\n" +
+	"senderType\x12.\n" +
+	"\x13sender_account_code\x18\x06 \x01(\tR\x11senderAccountCode\x12!\n" +
 	"\fsender_phone\x18\a \x01(\tR\vsenderPhone\x12,\n" +
 	"\x12sender_card_number\x18\b \x01(\tR\x10senderCardNumber\x12%\n" +
 	"\x0erecipient_type\x18\t \x01(\tR\rrecipientType\x124\n" +

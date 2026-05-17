@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option go_package = "pmtstm.v1;pmtstmv1";
+
+package account;
+
+import "account/shared.proto";
+
+service AccountService {
+  rpc CreateAccount (CreateAccountRequest) returns (CreateAccountResponse);
+  rpc GetAccount(GetAccountRequest) returns (GetAccountResponse);
+  rpc GetUserAccounts(GetUserAccountsRequest) returns (GetUserAccountsResponse);
+  rpc GetBalance (GetBalanceRequest) returns (GetBalanceResponse);
+}
+
+message CreateAccountRequest {
+  string currency = 1;
+  string name = 2;
+}
+
+message CreateAccountResponse {
+  string account_id = 1;
+}
+
+message GetAccountRequest {
+  string account_id = 1;
+}
+
+message GetAccountResponse {
+  CurrencyAccount account = 1;
+}
+
+message GetUserAccountsRequest {
+  optional UUID user_id = 1;
+}
+
+message GetUserAccountsResponse {
+  repeated CurrencyAccount accounts = 1;
+}
+
+message GetBalanceRequest {
+  string account_id = 1;
+}
+
+message GetBalanceResponse {
+  double balance = 1;
+}

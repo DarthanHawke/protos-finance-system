@@ -16,7 +16,7 @@ message Transaction {
   double amount = 3;
   string currency = 4;
   string sender_type = 5;
-  string sender_account_cCode = 6;
+  string sender_account_code = 6;
   string sender_phone = 7;
   string sender_card_number = 8;
   string recipient_type = 9;
