@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v6.31.0
-// source: account/shared.proto
+// source: account/v1/shared.proto
 
 package pmtstmv1
 
@@ -31,7 +31,7 @@ type UUID struct {
 
 func (x *UUID) Reset() {
 	*x = UUID{}
-	mi := &file_account_shared_proto_msgTypes[0]
+	mi := &file_account_v1_shared_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -43,7 +43,7 @@ func (x *UUID) String() string {
 func (*UUID) ProtoMessage() {}
 
 func (x *UUID) ProtoReflect() protoreflect.Message {
-	mi := &file_account_shared_proto_msgTypes[0]
+	mi := &file_account_v1_shared_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -56,7 +56,7 @@ func (x *UUID) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UUID.ProtoReflect.Descriptor instead.
 func (*UUID) Descriptor() ([]byte, []int) {
-	return file_account_shared_proto_rawDescGZIP(), []int{0}
+	return file_account_v1_shared_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *UUID) GetValue() string {
@@ -84,7 +84,7 @@ type Account struct {
 
 func (x *Account) Reset() {
 	*x = Account{}
-	mi := &file_account_shared_proto_msgTypes[1]
+	mi := &file_account_v1_shared_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -96,7 +96,7 @@ func (x *Account) String() string {
 func (*Account) ProtoMessage() {}
 
 func (x *Account) ProtoReflect() protoreflect.Message {
-	mi := &file_account_shared_proto_msgTypes[1]
+	mi := &file_account_v1_shared_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -109,7 +109,7 @@ func (x *Account) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Account.ProtoReflect.Descriptor instead.
 func (*Account) Descriptor() ([]byte, []int) {
-	return file_account_shared_proto_rawDescGZIP(), []int{1}
+	return file_account_v1_shared_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Account) GetCode() string {
@@ -182,11 +182,11 @@ func (x *Account) GetUpdatedAt() *timestamppb.Timestamp {
 	return nil
 }
 
-var File_account_shared_proto protoreflect.FileDescriptor
+var File_account_v1_shared_proto protoreflect.FileDescriptor
 
-const file_account_shared_proto_rawDesc = "" +
+const file_account_v1_shared_proto_rawDesc = "" +
 	"\n" +
-	"\x14account/shared.proto\x12\aaccount\x1a\x1fgoogle/protobuf/timestamp.proto\"\x1c\n" +
+	"\x17account/v1/shared.proto\x12\aaccount\x1a\x1fgoogle/protobuf/timestamp.proto\"\x1c\n" +
 	"\x04UUID\x12\x14\n" +
 	"\x05value\x18\x01 \x01(\tR\x05value\"\xed\x02\n" +
 	"\aAccount\x12\x12\n" +
@@ -205,24 +205,24 @@ const file_account_shared_proto_rawDesc = "" +
 	" \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAtB\x14Z\x12pmtstm.v1;pmtstmv1b\x06proto3"
 
 var (
-	file_account_shared_proto_rawDescOnce sync.Once
-	file_account_shared_proto_rawDescData []byte
+	file_account_v1_shared_proto_rawDescOnce sync.Once
+	file_account_v1_shared_proto_rawDescData []byte
 )
 
-func file_account_shared_proto_rawDescGZIP() []byte {
-	file_account_shared_proto_rawDescOnce.Do(func() {
-		file_account_shared_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_account_shared_proto_rawDesc), len(file_account_shared_proto_rawDesc)))
+func file_account_v1_shared_proto_rawDescGZIP() []byte {
+	file_account_v1_shared_proto_rawDescOnce.Do(func() {
+		file_account_v1_shared_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_account_v1_shared_proto_rawDesc), len(file_account_v1_shared_proto_rawDesc)))
 	})
-	return file_account_shared_proto_rawDescData
+	return file_account_v1_shared_proto_rawDescData
 }
 
-var file_account_shared_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_account_shared_proto_goTypes = []any{
+var file_account_v1_shared_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_account_v1_shared_proto_goTypes = []any{
 	(*UUID)(nil),                  // 0: account.UUID
 	(*Account)(nil),               // 1: account.Account
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
-var file_account_shared_proto_depIdxs = []int32{
+var file_account_v1_shared_proto_depIdxs = []int32{
 	0, // 0: account.Account.user_id:type_name -> account.UUID
 	2, // 1: account.Account.created_at:type_name -> google.protobuf.Timestamp
 	2, // 2: account.Account.updated_at:type_name -> google.protobuf.Timestamp
@@ -233,26 +233,26 @@ var file_account_shared_proto_depIdxs = []int32{
 	0, // [0:3] is the sub-list for field type_name
 }
 
-func init() { file_account_shared_proto_init() }
-func file_account_shared_proto_init() {
-	if File_account_shared_proto != nil {
+func init() { file_account_v1_shared_proto_init() }
+func file_account_v1_shared_proto_init() {
+	if File_account_v1_shared_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_account_shared_proto_rawDesc), len(file_account_shared_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_account_v1_shared_proto_rawDesc), len(file_account_v1_shared_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_account_shared_proto_goTypes,
-		DependencyIndexes: file_account_shared_proto_depIdxs,
-		MessageInfos:      file_account_shared_proto_msgTypes,
+		GoTypes:           file_account_v1_shared_proto_goTypes,
+		DependencyIndexes: file_account_v1_shared_proto_depIdxs,
+		MessageInfos:      file_account_v1_shared_proto_msgTypes,
 	}.Build()
-	File_account_shared_proto = out.File
-	file_account_shared_proto_goTypes = nil
-	file_account_shared_proto_depIdxs = nil
+	File_account_v1_shared_proto = out.File
+	file_account_v1_shared_proto_goTypes = nil
+	file_account_v1_shared_proto_depIdxs = nil
 }

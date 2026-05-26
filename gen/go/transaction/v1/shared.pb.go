@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v6.31.0
-// source: transaction/shared.proto
+// source: transaction/v1/shared.proto
 
 package pmtstmv1
 
@@ -31,7 +31,7 @@ type UUID struct {
 
 func (x *UUID) Reset() {
 	*x = UUID{}
-	mi := &file_transaction_shared_proto_msgTypes[0]
+	mi := &file_transaction_v1_shared_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -43,7 +43,7 @@ func (x *UUID) String() string {
 func (*UUID) ProtoMessage() {}
 
 func (x *UUID) ProtoReflect() protoreflect.Message {
-	mi := &file_transaction_shared_proto_msgTypes[0]
+	mi := &file_transaction_v1_shared_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -56,7 +56,7 @@ func (x *UUID) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UUID.ProtoReflect.Descriptor instead.
 func (*UUID) Descriptor() ([]byte, []int) {
-	return file_transaction_shared_proto_rawDescGZIP(), []int{0}
+	return file_transaction_v1_shared_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *UUID) GetValue() string {
@@ -93,7 +93,7 @@ type Transaction struct {
 
 func (x *Transaction) Reset() {
 	*x = Transaction{}
-	mi := &file_transaction_shared_proto_msgTypes[1]
+	mi := &file_transaction_v1_shared_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -105,7 +105,7 @@ func (x *Transaction) String() string {
 func (*Transaction) ProtoMessage() {}
 
 func (x *Transaction) ProtoReflect() protoreflect.Message {
-	mi := &file_transaction_shared_proto_msgTypes[1]
+	mi := &file_transaction_v1_shared_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -118,7 +118,7 @@ func (x *Transaction) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Transaction.ProtoReflect.Descriptor instead.
 func (*Transaction) Descriptor() ([]byte, []int) {
-	return file_transaction_shared_proto_rawDescGZIP(), []int{1}
+	return file_transaction_v1_shared_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Transaction) GetId() *UUID {
@@ -254,11 +254,11 @@ func (x *Transaction) GetUpdatedAt() *timestamppb.Timestamp {
 	return nil
 }
 
-var File_transaction_shared_proto protoreflect.FileDescriptor
+var File_transaction_v1_shared_proto protoreflect.FileDescriptor
 
-const file_transaction_shared_proto_rawDesc = "" +
+const file_transaction_v1_shared_proto_rawDesc = "" +
 	"\n" +
-	"\x18transaction/shared.proto\x12\vtransaction\x1a\x1fgoogle/protobuf/timestamp.proto\"\x1c\n" +
+	"\x1btransaction/v1/shared.proto\x12\vtransaction\x1a\x1fgoogle/protobuf/timestamp.proto\"\x1c\n" +
 	"\x04UUID\x12\x14\n" +
 	"\x05value\x18\x01 \x01(\tR\x05value\"\xf0\x05\n" +
 	"\vTransaction\x12!\n" +
@@ -287,24 +287,24 @@ const file_transaction_shared_proto_rawDesc = "" +
 	"updated_at\x18\x13 \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAtB\x14Z\x12pmtstm.v1;pmtstmv1b\x06proto3"
 
 var (
-	file_transaction_shared_proto_rawDescOnce sync.Once
-	file_transaction_shared_proto_rawDescData []byte
+	file_transaction_v1_shared_proto_rawDescOnce sync.Once
+	file_transaction_v1_shared_proto_rawDescData []byte
 )
 
-func file_transaction_shared_proto_rawDescGZIP() []byte {
-	file_transaction_shared_proto_rawDescOnce.Do(func() {
-		file_transaction_shared_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_transaction_shared_proto_rawDesc), len(file_transaction_shared_proto_rawDesc)))
+func file_transaction_v1_shared_proto_rawDescGZIP() []byte {
+	file_transaction_v1_shared_proto_rawDescOnce.Do(func() {
+		file_transaction_v1_shared_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_transaction_v1_shared_proto_rawDesc), len(file_transaction_v1_shared_proto_rawDesc)))
 	})
-	return file_transaction_shared_proto_rawDescData
+	return file_transaction_v1_shared_proto_rawDescData
 }
 
-var file_transaction_shared_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_transaction_shared_proto_goTypes = []any{
+var file_transaction_v1_shared_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_transaction_v1_shared_proto_goTypes = []any{
 	(*UUID)(nil),                  // 0: transaction.UUID
 	(*Transaction)(nil),           // 1: transaction.Transaction
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
-var file_transaction_shared_proto_depIdxs = []int32{
+var file_transaction_v1_shared_proto_depIdxs = []int32{
 	0, // 0: transaction.Transaction.id:type_name -> transaction.UUID
 	2, // 1: transaction.Transaction.created_at:type_name -> google.protobuf.Timestamp
 	2, // 2: transaction.Transaction.updated_at:type_name -> google.protobuf.Timestamp
@@ -315,26 +315,26 @@ var file_transaction_shared_proto_depIdxs = []int32{
 	0, // [0:3] is the sub-list for field type_name
 }
 
-func init() { file_transaction_shared_proto_init() }
-func file_transaction_shared_proto_init() {
-	if File_transaction_shared_proto != nil {
+func init() { file_transaction_v1_shared_proto_init() }
+func file_transaction_v1_shared_proto_init() {
+	if File_transaction_v1_shared_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_transaction_shared_proto_rawDesc), len(file_transaction_shared_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_transaction_v1_shared_proto_rawDesc), len(file_transaction_v1_shared_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_transaction_shared_proto_goTypes,
-		DependencyIndexes: file_transaction_shared_proto_depIdxs,
-		MessageInfos:      file_transaction_shared_proto_msgTypes,
+		GoTypes:           file_transaction_v1_shared_proto_goTypes,
+		DependencyIndexes: file_transaction_v1_shared_proto_depIdxs,
+		MessageInfos:      file_transaction_v1_shared_proto_msgTypes,
 	}.Build()
-	File_transaction_shared_proto = out.File
-	file_transaction_shared_proto_goTypes = nil
-	file_transaction_shared_proto_depIdxs = nil
+	File_transaction_v1_shared_proto = out.File
+	file_transaction_v1_shared_proto_goTypes = nil
+	file_transaction_v1_shared_proto_depIdxs = nil
 }

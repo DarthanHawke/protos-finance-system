@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v6.31.0
-// source: account/account.proto
+// source: account/v1/account.proto
 
 package pmtstmv1
 
@@ -270,5 +270,5 @@ var AccountService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "account/account.proto",
+	Metadata: "account/v1/account.proto",
 }

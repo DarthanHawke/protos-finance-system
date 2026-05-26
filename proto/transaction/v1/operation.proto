@@ -4,7 +4,7 @@ option go_package = "pmtstm.v1;pmtstmv1";
 
 package transaction;
 
-import "transaction/shared.proto";
+import "transaction/v1/shared.proto";
 
 service TransactionService {
   rpc GetTransaction (GetTransactionRequest) returns (GetTransactionResponse);

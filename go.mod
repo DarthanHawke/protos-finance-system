@@ -1,6 +1,6 @@
 module github.com/DarthanHawke/protos-finance-system
 
-go 1.23.6
+go 1.26.3
 
 require (
 	google.golang.org/grpc v1.73.0
